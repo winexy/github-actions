@@ -1,6 +1,18 @@
 name: Actions Workflow
 on: 
-  # push:
+  push:
+    branches: 
+      - master
+      - 'feature/*'
+      - 'feature/**'
+      - '!feature/featC'
+    tags: 
+      - v1.*
+    paths:
+      - '**.js'
+      - '!docs/**'
+    # paths-ignore:
+      # - 'docs/**'
   # schedule:
     # - cron: "0/5 * * * *"
     # - cron: "0/6 * * * *"
